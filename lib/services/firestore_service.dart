@@ -10,7 +10,7 @@ class FirestoreService {
     try {
       await _entriesCollection.add(entry.toMap());
     } catch (e) {
-      print('Erro ao adicionar entrada: $e'); // Adicionando um log para depuração
+      print('Erro ao adicionar entrada: $e');
     }
   }
 
@@ -19,7 +19,7 @@ class FirestoreService {
     try {
       await _entriesCollection.doc(entry.id).update(entry.toMap());
     } catch (e) {
-      print('Erro ao atualizar entrada: $e'); // Adicionando um log para depuração
+      print('Erro ao atualizar entrada: $e');
     }
   }
 
@@ -28,7 +28,7 @@ class FirestoreService {
     try {
       await _entriesCollection.doc(id).delete();
     } catch (e) {
-      print('Erro ao deletar entrada: $e'); // Adicionando um log para depuração
+      print('Erro ao deletar entrada: $e');
     }
   }
 

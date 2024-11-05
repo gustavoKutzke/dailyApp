@@ -4,13 +4,13 @@ class Entry {
   final String id;
   final String title;
   final String description;
-  final Timestamp createdAt; // Nova propriedade para a data de criação
+  final Timestamp createdAt;
 
   Entry({
     required this.id,
     required this.title,
     required this.description,
-    required this.createdAt, // Adicionando a nova propriedade no construtor
+    required this.createdAt,
   });
 
   // Método para criar uma instância de Entry a partir de um mapa
@@ -28,7 +28,7 @@ class Entry {
     return {
       'title': title,
       'description': description,
-      'createdAt': createdAt, // Adicionando o createdAt ao mapa
+      'createdAt': createdAt,
     };
   }
 }

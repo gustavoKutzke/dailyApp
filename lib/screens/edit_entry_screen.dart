@@ -36,10 +36,10 @@ class EditEntryScreen extends StatelessWidget {
                   id: entry.id,
                   title: titleController.text,
                   description: descriptionController.text,
-                  createdAt: entry.createdAt, // Usando o valor existente de createdAt
+                  createdAt: entry.createdAt,
                 );
                 await _firestoreService.updateEntry(updatedEntry);
-                Navigator.pop(context); // Voltar à tela anterior
+                Navigator.pop(context);
               },
               child: Text('Salvar'),
             ),

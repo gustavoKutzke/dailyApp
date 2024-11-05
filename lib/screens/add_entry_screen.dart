@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import '../models/entry.dart'; // Certifique-se de importar o seu modelo Entry
-import '../services/firestore_service.dart'; // Importando o serviço Firestore
+import '../models/entry.dart';
+import '../services/firestore_service.dart';
 
 class AddEntryScreen extends StatelessWidget {
   final TextEditingController titleController = TextEditingController();
   final TextEditingController descriptionController = TextEditingController();
-  final FirestoreService _firestoreService = FirestoreService(); // Instância do FirestoreService
+  final FirestoreService _firestoreService = FirestoreService();
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class AddEntryScreen extends StatelessWidget {
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () async {
-                await addEntry(context); // Passando o contexto para o método
+                await addEntry(context);
               },
               child: Text('Adicionar'),
             ),
@@ -49,7 +49,7 @@ class AddEntryScreen extends StatelessWidget {
           duration: Duration(seconds: 2),
         ),
       );
-      return; // Sai da função
+      return;
     }
 
     // Adiciona a entrada
@@ -75,7 +75,7 @@ class AddEntryScreen extends StatelessWidget {
       descriptionController.clear();
 
     } catch (e) {
-      print('Erro ao adicionar entrada: $e'); // Log de erro
+      print('Erro ao adicionar entrada: $e');
       // Exibir mensagem de erro
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
