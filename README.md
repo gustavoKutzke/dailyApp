@@ -76,3 +76,7 @@ Este aplicativo Flutter permite autenticação, criação, edição e exclusão 
    ```bash
    git clone https://github.com/gustavoKutzke/dailyApp.git
    cd dailyApp
+
+   ## **Download do APK**  
+- [Baixe aqui o Daily App](./apk/app-release.apk)
+
